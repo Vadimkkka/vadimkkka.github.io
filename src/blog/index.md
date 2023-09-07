@@ -9,12 +9,13 @@ head:
 # Заметки за🫠банного Вадима
 
 <script setup>
+import { withBase } from 'vitepress'
 import { data } from '../../.vitepress/posts.data.ts'
 </script>
 
 <ul>
   <li v-for="post of data">
-    <a :href="post.url">{{ post.title }}</a>
+    <a :href="withBase(post.url)">{{ post.title }}</a>
     <span>{{ post.description }}</span>
   </li>
 </ul>
