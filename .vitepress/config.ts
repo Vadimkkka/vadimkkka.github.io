@@ -14,7 +14,7 @@ export default defineConfig({
   srcDir: "src",
   lastUpdated: true,
   cleanUrls: true,
-  head: [['link', { rel: "shortcut icon", href: "/favicon.ico"}]],
+  head: [['link', { rel: "shortcut icon", href: "/site/favicon.ico"}]],
   /* locales: {
     root: { label: 'English', lang: 'en' },
     ru: { label: 'Russian', lang: 'ru' }
