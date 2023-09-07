@@ -8,6 +8,7 @@ export default defineConfig({
       md.use(ColorfulCheckbox)
     },
   },
+  base: '/site/',
   title: "Goosveridze",
   description: "A Vadimkkka site",
   srcDir: "src",
