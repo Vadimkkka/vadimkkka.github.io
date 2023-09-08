@@ -129,6 +129,10 @@
   --vp-custom-block-tip-code-bg: var(--vp-c-brand-soft);
 }
 
+img, video, .c-checkbox {
+  border-radius: 4px;
+}
+
 .vp-doc ul.task-list {
   list-style: none;
   padding-left: 0;
@@ -136,7 +140,6 @@
 
 .c-checkbox {
   background-color: #b8b7b7;
-  border-radius: 4px;
   display: inline-block;
   height: 16px;
   width: 16px;
