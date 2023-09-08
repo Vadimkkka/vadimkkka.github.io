@@ -7,12 +7,21 @@ export default createContentLoader('src/blog/*.md', {
       rawData.splice(index, 1);
     }
 
-    return rawData.sort((a, b) => {
-      return +new Date(b.frontmatter.date) - +new Date(a.frontmatter.date)
-    }).map(({ url,frontmatter }) => ({
-      url,
-      title: frontmatter.title,
-      description: frontmatter.description,
-    }))
+    return rawData
+      .filter(x => x.frontmatter.createdAt)
+      .sort((a, b) => (+new Date(b.frontmatter.createdAt) - +new Date(a.frontmatter.createdAt)))
+      .map(({ url, frontmatter }) => {
+        let preview = frontmatter.head?.find(x => x[0] === 'meta' && x[1].name === 'og:image')
+        if (preview) {
+          preview = preview[1].content
+        }
+        return  {
+          url,
+          preview,
+          title: frontmatter.title,
+          tags: frontmatter.tags.split(' '),
+          description: frontmatter.description,
+        }
+    })
   }
 })

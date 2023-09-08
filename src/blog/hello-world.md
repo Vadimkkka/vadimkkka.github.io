@@ -1,10 +1,13 @@
 ---
 title: 🚀 Как создавался блог
+description: Мотивация. Фреймворки. Создание. Деплой. Обновление.
+tags: жиза
+createdAt: 2023-09-15T21:33
 outline: deep
 head:
   - - meta
     - name: og:image
-      content: "https://vadimkkka.github.io/site/blog/hello-world/preview.jpeg"
+      content: "https://vadimkkka.github.io/site/hello-world.jpeg"
   - - meta
     - name: keywords
       content: dev blog vite vitepress
@@ -12,7 +15,7 @@ head:
 
 # {{ $frontmatter.title }}
 
-![Preview](./hello-world/preview.jpeg)
+![Preview](/hello-world.jpeg)
 
 ::: details Спойлер
 Стандартный шаблон VitePress
