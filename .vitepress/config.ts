@@ -14,7 +14,17 @@ export default defineConfig({
   srcDir: "src",
   lastUpdated: true,
   cleanUrls: true,
-  head: [['link', { rel: "shortcut icon", href: "/site/favicon.ico"}]],
+  head: [
+    ['link', { rel: 'shortcut icon', href: '/site/favicon.ico'}],
+    ['meta', { name: 'keywords', content: 'dev blog' }],
+    ['meta', { name: 'theme-color', media: '(prefers-color-scheme: light)', content: '#1b1b1f' }],
+    ['meta', { name: 'theme-color', media: '(prefers-color-scheme: dark)', content: '#ffffff' }],
+    ['meta', { name: 'robots', content: 'index, archive' }],
+    ['meta', { name: 'og:type', content: 'website' }],
+    // ['meta', { name: 'og:locale', content: 'en' }],
+    ['meta', { name: 'og:site_name', content: 'Goosveridze' }],
+    ['meta', { name: 'og:image', content: 'https://vadimkkka.github.io/site/me.png' }],
+  ],
   /* locales: {
     root: { label: 'English', lang: 'en' },
     ru: { label: 'Russian', lang: 'ru' }
