@@ -8,6 +8,7 @@ export default defineConfig({
       md.use(ColorfulCheckbox)
     },
   },
+  sitemap: { hostname: 'https://vadimkkka.github.io' },
   base: '/site/',
   title: "Goosveridze",
   description: "A Vadimkkka site",
