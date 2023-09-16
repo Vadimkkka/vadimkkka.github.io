@@ -45,7 +45,7 @@ export default defineConfig({
       { text: 'Blog', link: blogDir },
     ],
     sidebar: {
-      [blogDir]: [{ text: 'Articles', link:  blogDir, items: blogSidebarItems }],
+      [blogDir]: [{ text: 'Статьи', link:  blogDir, items: blogSidebarItems }],
     },
     socialLinks: [
       { icon: 'github', link: 'https://github.com/Vadimkkka' }
