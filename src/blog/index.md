@@ -13,6 +13,7 @@ head:
 import { ref, computed } from 'vue'
 import { withBase } from 'vitepress'
 import { data } from '../../.vitepress/posts.data.ts'
+import CountdownTimer from '../../.vitepress/countdown-timer.vue'
 
 const tags = new Set(data.flatMap(post => post.tags))
 const selected = ref(new Set())
@@ -28,7 +29,12 @@ const filteredPosts = computed(() => {
 })
 </script>
 
-<p>
+<p class="info">
+  <span>Новая статья <code>каждую неделю</code></span>
+  <CountdownTimer />
+</p>
+
+<p class="tag-filter">Фильтр по тегам:
   <code
     v-for="tag in tags"
     :key="tag"
@@ -37,7 +43,7 @@ const filteredPosts = computed(() => {
   >#{{ tag }}</code>
 </p>
 
-<ul>
+<ul class="articles">
   <li v-for="(post, i) in filteredPosts" :key="i">
     <img v-if="post.preview" :src="post.preview" />
     <div>
@@ -49,19 +55,35 @@ const filteredPosts = computed(() => {
 </ul>
 
 <style scoped>
+.info {
+  display: flex;
+  justify-content: space-between;
+}
+
+.tag-filter code {
+  cursor: pointer;
+}
+
+.tag-filter code,
+.articles code {
+  margin-right: 16px;
+}
+
+.tag-filter code.selected {
+  border: 1px solid var(--vp-code-color);
+}
+
+code {
+  user-select: none;
+  white-space: nowrap;
+}
+
 li {
   list-style: decimal;
 }
+
 li h3 {
   margin: unset;
-}
-code {
-  cursor: pointer;
-  user-select: none;
-  margin-right: 16px;
-}
-.selected {
-  border: 1px solid var(--vp-code-color);
 }
 
 @media (min-width: 600px)  {
