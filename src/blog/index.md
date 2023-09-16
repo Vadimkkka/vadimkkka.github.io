@@ -95,6 +95,9 @@ li h3 {
 }
 
 @media (max-width: 600px) {
+  .info {
+    flex-direction: column;
+  }
   li img {
     display: none;
   }
