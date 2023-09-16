@@ -18,8 +18,8 @@ export default defineConfig({
   head: [
     ['link', { rel: 'shortcut icon', href: '/site/favicon.ico'}],
     ['meta', { name: 'keywords', content: 'dev blog' }],
-    ['meta', { name: 'theme-color', media: '(prefers-color-scheme: light)', content: '#1b1b1f' }],
-    ['meta', { name: 'theme-color', media: '(prefers-color-scheme: dark)', content: '#ffffff' }],
+    ['meta', { name: 'theme-color', media: '(prefers-color-scheme: dark)', content: '#1b1b1f' }],
+    ['meta', { name: 'theme-color', media: '(prefers-color-scheme: light)', content: '#ffffff' }],
     ['meta', { name: 'robots', content: 'index, archive' }],
     ['meta', { name: 'og:type', content: 'website' }],
     // ['meta', { name: 'og:locale', content: 'en' }],
