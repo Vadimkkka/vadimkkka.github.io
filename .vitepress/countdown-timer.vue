@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { ref } from 'vue'
+import { ref, onMounted } from 'vue'
 
 const deadline = new Date()
 deadline.setDate(deadline.getDate() - deadline.getDay() + 7)
@@ -45,16 +45,17 @@ function getTimeRemaining() {
 
 const countdown = ref(getTimeRemaining())
 
-setInterval((interval: number) => {
-  if (total <= secondMs) {
-    deadline.setDate(deadline.getDate() + 7)
-    total = deadline.getTime() - Date.now()
-  }
+onMounted(() => {
+  setInterval((interval: number) => {
+    if (total <= secondMs) {
+      deadline.setDate(deadline.getDate() + 7)
+      total = deadline.getTime() - Date.now()
+    }
 
-  total -= interval
-  countdown.value = getTimeRemaining()
-}, secondMs, secondMs);
-
+    total -= interval
+    countdown.value = getTimeRemaining()
+  }, secondMs, secondMs);
+})
 </script>
 
 <template>
