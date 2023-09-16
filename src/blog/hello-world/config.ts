@@ -1,4 +1,5 @@
 import { defineConfig } from 'vitepress'
+import getBlogSidebarItems from './blog-sidebar-items'
 
 export default defineConfig({
   base: '/site/',
@@ -19,9 +20,7 @@ export default defineConfig({
         {
           text: 'Articles',
           link:  '/blog/',
-          items: [
-            { text: '🚀 Как создавался блог', link: '/blog/hello-world' },
-          ]
+          items: getBlogSidebarItems('src', '/blog/'),
         }
       ],
     },

@@ -76,9 +76,15 @@ $ npm add -D vitepress
 
 ### Конфигурации
 
-> Единственный минус - пока не придумал способ как генерировать ссылки в sidebar
+> Единственный минус - самому генерировать sidebar
 
-<<< @/blog/hello-world/config.ts{17-27}
+```.vitepress/config.ts```
+
+<<< @/blog/hello-world/config.ts{23}
+
+```.vitepress/blog-sidebar-items.ts```
+
+<<< @/blog/hello-world/blog-sidebar-items.ts
 
 ### Структура проекта
 
@@ -88,13 +94,7 @@ $ npm add -D vitepress
 
 ## 3️⃣  Деплой
 
-Просто возьмите пример из [документации](https://vitepress.dev/guide/deploy#github-pages)
-
-### GitHub Pages
-
-Создайте файл ```.github/workflows/deploy.yml``` с таким содержимым:
-
-<<< @/blog/hello-world/deploy.yml
+Просто возьмите пример из [документации](https://vitepress.dev/guide/deploy)
 
 ## 4️⃣  Обновления
 
