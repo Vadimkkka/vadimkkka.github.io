@@ -349,4 +349,4 @@ $ ./app --encode --offset 7 LOOKSLIKEYOUHACKEDME
 $ ./app --decode --offset 7 SVVRZSPRLFVBOHJRLKTL
 ```
 
-<<< @/blog/c-lang/сaesar-cipher.c
+<<< @/blog/c-lang/caesar-cipher.c
