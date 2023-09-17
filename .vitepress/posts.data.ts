@@ -21,6 +21,7 @@ export default createContentLoader('src/blog/*.md', {
           title: frontmatter.title,
           tags: frontmatter.tags.split(' '),
           description: frontmatter.description,
+          date: new Date(frontmatter.createdAt).toLocaleDateString('ru', { day: '2-digit', month: '2-digit', year: '2-digit' })
         }
     })
   }

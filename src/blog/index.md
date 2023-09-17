@@ -47,6 +47,7 @@ const filteredPosts = computed(() => {
   <li v-for="(post, i) in filteredPosts" :key="i">
     <img v-if="post.preview" :src="post.preview" />
     <div>
+      <kbd>{{ post.date }}</kbd>
       <h3><a :href="withBase(post.url)">{{ post.title }}</a></h3>
       <p>{{ post.description }}</p>
       <code v-for="tag in post.tags">#{{ tag }}</code>
@@ -78,8 +79,17 @@ code {
   white-space: nowrap;
 }
 
+kbd {
+  float: right;
+  font-size: 12px;
+}
+
 li {
   list-style: decimal;
+}
+
+li + li {
+  margin-top: 16px;
 }
 
 li h3 {
