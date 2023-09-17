@@ -84,13 +84,13 @@ onMounted(() => {
 <style scoped>
 .timer {
   display: flex;
+  font-family: var(--vp-font-family-mono);
   font-size: 32px;
   line-height: 1;
 }
 .timer-item {
   display: flex;
   position: relative;
-  width: 40px;
   margin-left: 8px;
   margin-right: 8px;
   padding-bottom: 12px;
@@ -103,23 +103,23 @@ onMounted(() => {
   left: 50%;
   bottom: 0;
   transform: translateX(-50%);
-  font-size: 10px;
+  font-size: 12px;
 }
 .timer-item:not(:last-child)::after {
   content: ':';
   position: absolute;
   top: 0;
-  right: -12px;
+  right: -18px;
 }
 .timer-item-digits {
   position: relative;
-  width: 20px;
+  width: 19.3px;
 }
 
 .flip-enter-active,
 .flip-leave-active {
   position: absolute;
-  width: 100%;
+  left: 0;
   transition: opacity 600ms ease-out, transform 600ms ease-out;
 }
 .flip-enter-active {
