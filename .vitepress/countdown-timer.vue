@@ -2,7 +2,9 @@
 import { ref, onMounted } from 'vue'
 
 const deadline = new Date()
-deadline.setDate(deadline.getDate() - deadline.getDay() + 7)
+if (deadline.getDay()) {
+  deadline.setDate(deadline.getDate() - deadline.getDay() + 6)
+}
 deadline.setHours(24, 0, 0, 0)
 
 let total = deadline.getTime() - Date.now()
