@@ -20,7 +20,7 @@ hero:
 features:
   - icon: 👅
     title: Languages
-    details: JavaScript, TypeScript, Rust
+    details: JavaScript, TypeScript, Rust, C
   - icon: 🧑‍💻
     title: Frameworks & Libs
     details: Vue, Nuxt, Sass, Tailwind, Jest, Tauri
