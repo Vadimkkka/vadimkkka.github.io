@@ -23,7 +23,7 @@ function getBlogSidebarItems(srcDir: string, linkDir: string) {
         }
       }
       return acc
-    }, []).sort((a:Item, b: Item) => b.date - a.date)
+    }, []).sort((a:Item, b: Item) => a.date - b.date)
 }
 
 export default getBlogSidebarItems
