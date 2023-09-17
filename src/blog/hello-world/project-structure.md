@@ -3,6 +3,7 @@ Blog
 │   ├── theme
 │   │   ├── index.ts
 │   │   └── style.css
+│   ├── blog-sidebar-items.ts
 │   ├── config.ts
 │   └── posts.data.ts
 ├── src
