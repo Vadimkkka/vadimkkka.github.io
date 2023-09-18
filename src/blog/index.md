@@ -67,7 +67,7 @@ const filteredPosts = computed(() => {
 
 .tag-filter code,
 .articles code {
-  margin-right: 16px;
+  margin-right: 8px;
 }
 
 .tag-filter code.selected {
