@@ -3,7 +3,7 @@ import { ref, onMounted } from 'vue'
 
 const deadline = new Date()
 if (deadline.getDay()) {
-  deadline.setDate(deadline.getDate() - deadline.getDay() + 6)
+  deadline.setDate(deadline.getDate() - deadline.getDay() + 7)
 }
 deadline.setHours(24, 0, 0, 0)
 
