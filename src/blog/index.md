@@ -13,7 +13,7 @@ head:
 import { ref, computed } from 'vue'
 import { withBase } from 'vitepress'
 import { data } from '../../.vitepress/posts.data.ts'
-import CountdownTimer from '../../.vitepress/countdown-timer.vue'
+// import CountdownTimer from '../../.vitepress/countdown-timer.vue'
 
 const tags = new Set(data.flatMap(post => post.tags))
 const selected = ref(new Set())
@@ -29,10 +29,10 @@ const filteredPosts = computed(() => {
 })
 </script>
 
-<p class="info">
+<!-- <p class="info">
   <span>Новая статья <code>каждую неделю</code></span>
   <CountdownTimer />
-</p>
+</p> -->
 
 <p class="tag-filter">Фильтр по тегам:
   <code
