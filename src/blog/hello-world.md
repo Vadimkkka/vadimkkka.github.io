@@ -82,13 +82,13 @@ $ npm add -D vitepress
 ::: danger Единственный минус
 Надо самому генерировать sidebar
 :::
-```.vitepress/config.ts```
 
-<<< @/blog/hello-world/config.ts{23}
+::: code-group
+<<< @/blog/hello-world/config.ts [.vitepress/config.ts]
 
-```.vitepress/blog-sidebar-items.ts```
+<<< @/blog/hello-world/blog-sidebar-items.ts [.vitepress/blog-sidebar-items.ts]
+:::
 
-<<< @/blog/hello-world/blog-sidebar-items.ts
 
 ### Структура проекта
 

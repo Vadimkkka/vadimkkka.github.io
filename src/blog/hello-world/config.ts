@@ -20,7 +20,7 @@ export default defineConfig({
         {
           text: 'Articles',
           link:  '/blog/',
-          items: getBlogSidebarItems('src', '/blog/'),
+          items: getBlogSidebarItems('src', '/blog/'), // [!code hl]
         }
       ],
     },
