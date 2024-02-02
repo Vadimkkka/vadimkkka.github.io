@@ -3,7 +3,7 @@ import getBlogSidebarItems from './blog-sidebar-items'
 import ColorfulCheckbox from 'markdown-it-colorful-checkbox'
 
 const srcDir = 'src'
-const base = '/site/'
+const base = '/'
 const blogDir = '/blog/'
 const blogSidebarItems = getBlogSidebarItems(srcDir, blogDir)
 
@@ -38,7 +38,7 @@ export default defineConfig({
   }, */
   // https://vitepress.dev/reference/default-theme-config
   themeConfig: {
-    logo: 'oni.png',
+    logo: '/oni.png',
     search: { provider: 'local' },
     nav: [
       { text: 'Home', link: '/' },

@@ -7,7 +7,7 @@ outline: deep
 head:
   - - meta
     - name: og:image
-      content: "https://vadimkkka.github.io/site/c-lang.jpeg"
+      content: "/c-lang.jpeg"
   - - meta
     - name: keywords
       content: dev blog clang gcc c

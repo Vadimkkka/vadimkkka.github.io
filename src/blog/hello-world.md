@@ -7,7 +7,7 @@ outline: deep
 head:
   - - meta
     - name: og:image
-      content: "https://vadimkkka.github.io/site/hello-world.jpeg"
+      content: "/hello-world.jpeg"
   - - meta
     - name: keywords
       content: dev blog vite vitepress
