@@ -1,6 +1,6 @@
 import { createContentLoader } from 'vitepress'
 
-export default createContentLoader('src/blog/*.md', {
+export default createContentLoader('../src/blog/*.md', {
   transform(rawData) {
     const index = rawData.findIndex(x => x.url === '/blog/');
     if (index !== -1) {
