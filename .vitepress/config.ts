@@ -1,6 +1,7 @@
 import { defineConfig } from 'vitepress'
 import getBlogSidebarItems from './blog-sidebar-items'
 import ColorfulCheckbox from 'markdown-it-colorful-checkbox'
+import slugify from '@sindresorhus/slugify';
 
 const srcDir = 'src'
 const base = '/'
@@ -13,6 +14,13 @@ export default defineConfig({
     config(md) {
       md.use(ColorfulCheckbox)
     },
+    anchor: {
+      level: 2,
+      slugify,
+    },
+    image: {
+      lazyLoading: true
+    }
   },
   sitemap: { hostname: 'https://vadimkkka.github.io' },
   base,
