@@ -5,8 +5,11 @@
     "build": "vitepress build",
     "preview": "vitepress preview"
   },
+  "dependencies": {
+    "@sindresorhus/slugify": "^2.2.1",
+    "markdown-it-colorful-checkbox": "^1.0.2"
+  },
   "devDependencies": {
-    "markdown-it-colorful-checkbox": "^1.0.2",
-    "vitepress": "^1.0.0-rc.10"
+    "vitepress": "^1.1.4"
   }
 }
